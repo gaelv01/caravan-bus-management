@@ -1,8 +1,8 @@
 <?php
 //session_name('caravan');
 //session_start();
-require('db/connection.php');
-include('util/tags.php');
+require('../db/connection.php');
+include('../util/tags.php');
 
 beginHtml("Caravan: Stressless management");
 showHeader('standalone');
@@ -11,7 +11,7 @@ showMain('centered');
 echo "
         <div class='login-card'>
             <div class='login-card-logo'>
-                <img src='img/logo.png' alt='logo'>
+                <img src='../img/logo.png' alt='logo'>
             </div>
             <div class='login-card-header'>
                 <h1>Iniciar sesión</h1>
