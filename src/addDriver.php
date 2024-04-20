@@ -6,7 +6,7 @@ include('../util/tags.php');
 
 $embeddedhtml= '
 	<div class="bloque">
-    <form method="get" action="" class="formulario --altas">
+    <form method="get" action="addDriver.next.php" class="formulario --altas">
 	<h1>Alta de conductores</h1>
 	<p>Ingresa los datos para registrar un conductor.</p>
 
