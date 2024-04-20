@@ -330,6 +330,8 @@ table i {
 }
 
 
+
+
 .mensaje-error {
     display: flex;
     align-items: center;
@@ -362,7 +364,7 @@ table i {
     margin-right: var(--tamano-1);
     display: flex;
     flex-wrap: wrap;
-    flex-direction: column;
+    flex-direction: column; 
     overflow-y: scroll;
 
     }
@@ -628,6 +630,9 @@ table i {
   .formulario select {
     cursor: pointer;
   }
+
+
+
 
 
 /* altas_usuarios.php */

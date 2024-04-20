@@ -31,6 +31,7 @@ function showHeader(string $type)
 		<header class="header">
       		<img src="../img/logo.png" alt="Logo" class="header_img">
      		 <p class="header_p">Caravan: Stressless bus management</p>
+			  <span id="tiempo"></span>
     	</header>
 		';
 	}
@@ -122,7 +123,7 @@ function showMenu()
 {
 	echo '
 	<ul class="menu__lista-princ">
-				<li class="menu__opcion"><a href="views/main_panel.php" class="menu__link --inicio"><i class="fa-sharp fa-solid fa-home" style="font-size: var(--tamano-2); padding-right: var(--tamano-med);"></i>Inicio</a></li>
+				<li class="menu__opcion"><a href="main_panel.php" class="menu__link --inicio"><i class="fa-sharp fa-solid fa-home" style="font-size: var(--tamano-2); padding-right: var(--tamano-med);"></i>Inicio</a></li>
 				
 				<li class="menu__opcion"><a href="" class="menu__link"><i class="fa-sharp fa-solid fa-bus" style="font-size: var(--tamano-1); padding-right: var(--tamano-med);"></i>Camiones</a>
 					<ul class="submenu__opcion"><a href="#" class="menu__link">Action 1</a></ul>		
@@ -135,7 +136,14 @@ function showMenu()
 				<ul class="submenu__opcion"><a href="#" class="menu__link">Action 3</a></ul>
 				<ul class="submenu__opcion"><a href="#" class="menu__link">Action 4</a></ul>
 				</li>
-				<li class="menu__opcion"><a href="#" class="menu__link --cerrar">Cerrar sesión</a></li>
+
+				<li class="menu__opcion"><a href="" class="menu__link"><i class="fa-sharp fa-solid fa-crown" style="font-size: var(--tamano-1); padding-right: var(--tamano-med);"></i>Administradores</a>
+					<ul class="submenu__opcion"><a href="addAdmin.php" class="menu__link">Alta</a></ul>		
+				</li>
+
+				<li class="menu__opcion"><a href="#" class="menu__link --cerrar">Cerrar sesión</a>
+				
+				</li>
 	</ul>
 	';
 }
