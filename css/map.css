@@ -1,0 +1,122 @@
+*{
+    --tipografia: "Inter Tight", sans-serif;
+}
+
+body{
+    background: #ffff;
+}
+
+.container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.map{
+    background: url(../img/mapblue.png) no-repeat;
+    background-position: 0px, opx;
+    background-size: auto;
+    width: 1300px;
+    height: 664px;
+    position: relative;
+}
+
+.position0{
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    display: block;
+    top: 260px;
+    left: 480px;
+}
+
+.position1{
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    display: block;
+    top: 100px;
+    left: 100px;
+}
+
+.position2{
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    display: block;
+    top: 320px;
+    left: 780px;
+}
+
+.position3{
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    display: block;
+    top: 500px;
+    left: 21px;
+}
+
+
+.title{
+    display: inline-block;
+    white-space: nowrap;
+    position: absolute;
+    left: 5em;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #fff;
+    color: #0798F2;
+    border-radius: 3em;
+    padding: 10px;
+}
+
+.marker{
+    width: 20px;
+    height: 20px;
+    position: relative;
+    top: 40px;
+    left: 40px;
+    background: #ca3bf1;
+    border-radius: 50%;
+    z-index: 100%;
+}
+
+.marker-animation{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: block;
+    top: 0;
+    background: #F2B3EE;
+    border-radius: 50%;
+    animation: pulse 3600ms ease-out infinite;
+}
+
+.marker-animation1{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: block;
+    top: 0;
+    background: #F2B3EE;
+    border-radius: 50%;
+    opacity: 0;
+    animation: pulse 3600ms ease-out infinite;
+    animation-delay: .5s;
+}
+
+@keyframes pulse{
+    0%{
+        transform: scale(0.1);
+        opacity: 0;
+    }
+    50%{
+        opacity: 0.5;
+    }
+    100%{
+        transform: scale(0.8);
+        opacity: 0;
+    }
+}

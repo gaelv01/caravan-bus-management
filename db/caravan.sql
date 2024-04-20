@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 20-04-2024 a las 00:22:49
+-- Tiempo de generación: 20-04-2024 a las 06:20:07
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.2.12
 
@@ -74,6 +74,7 @@ CREATE TABLE `conductores` (
 --
 
 CREATE TABLE `rutas` (
+  `ID` int(11) NOT NULL,
   `INICIO` varchar(150) NOT NULL,
   `FIN` varchar(150) NOT NULL,
   `TIEMPO` time NOT NULL
