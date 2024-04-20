@@ -1,8 +1,7 @@
 <?php
 $host = "localhost";
-$usuariobd = "root";
-$passwordbd = "";
-$nombredebase = "caravan";
-$enlace1 = mysqli_connect($host, $usuariobd, $passwordbd, $nombredebase);
-mysqli_set_charset($enlace1,'utf8');
-?>
+$user = "root";
+$password = "";
+$db_name = "caravan";
+$connection = mysqli_connect($host, $user, $password, $db_name);
+mysqli_set_charset($connection,'utf8');

@@ -8,13 +8,13 @@ include('../util/tags.php');
 // if ($_SESSION['autorizacion'] == 1) 
 // {
 
-	$embeddedhtml =  '
-		<div class="bloque-bienvenida">
-			<h1>¡Bienvenido a Caravan!</h1>
+	$embeddedhtml =  "
+		<div class='bloque-bienvenida'>
+			<h1>Bienvenido a Caravan, $_SESSION[nombre]</h1>
 			<p>Este sistema está diseñado para administrar y ayudar a controlar las entidades de transporte, tales como camiones, conductores y rutas.</p>
-			<span class="icono"><img src="../img/logo.png"></span>
+			<span class='icono'><img src='../img/logo.png'></span>
 		</div>	
-	';
+	";
 	generatePage($embeddedhtml, 'Menú');
 
 // }

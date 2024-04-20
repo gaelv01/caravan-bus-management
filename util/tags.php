@@ -34,8 +34,7 @@ function showHeader(string $type)
       		<img src="../img/logo.png" alt="Logo" class="header_img">
      		 <p class="header_p">Caravan: Stressless bus management</p>
 			  <span id="tiempo"></span>
-    	</header>
-		';
+    	</header>';
 	}
 	else if ($type == 'full')
 	{
@@ -153,7 +152,7 @@ function showMenu()
 					<ul class="submenu__opcion"><a href="../src/viewAdmin.php" class="menu__link">Consultar</a></ul>		
 				</li>
 
-				<li class="menu__opcion"><a href="#" class="menu__link --cerrar">Cerrar sesión</a></li>
+				<li class="menu__opcion"><a href="../util/logout.php" class="menu__link --cerrar">Cerrar sesión</a></li>
 	</ul>
 	';
 }
@@ -196,6 +195,18 @@ function generatePage(string $embeddedHtml, string $title){
 	echo $embeddedHtml;
 
 	closeArea();
+	closeMain();
+	showFooter();
+	endHtml();
+}
+
+function generateFullNotifier(string $embeddedHtml, string $htmlTitle){
+	beginHtml($htmlTitle);
+	showHeader('standalone');
+	showMain('centered');
+
+	echo $embeddedHtml;
+
 	closeMain();
 	showFooter();
 	endHtml();
