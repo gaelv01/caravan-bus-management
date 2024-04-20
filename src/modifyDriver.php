@@ -1,17 +1,9 @@
 <?php
-//session_name('deprag');
-//session_start();
 require('../db/connection.php');
-//include('errores.php');
+include('../util/errorHandler.php');
 include('../util/tags.php');
 
-// if ($_SESSION['autorizacion'] == 1) 
-// { 
-
-
-	$embeddedhtml =  '
-
-	
+	$embeddedhtml =  '	
 	<div class="bloque">
     <form method="get" action="" class="formulario --modificaciones">
 	<h1>Modificación de conductores</h1>
@@ -55,12 +47,6 @@ include('../util/tags.php');
 </div>
 	';	
 
+(isset($_SESSION['auth'])) ? generatePage($embeddedhtml, 'Editar conductor') : authError();
 
-	generatePage($embeddedhtml, 'Editar conductor');
-// }
-// else 
-// {
-// 	$_SESSION['autorizacion'] = 0;
-// 	error_autorizacion();
-// } 
 ?>

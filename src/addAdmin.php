@@ -2,17 +2,11 @@
 
 require('../db/connection.php');
 include('../util/tags.php');
+include('../util/errorHandler.php');
 
-beginHtml('Agregar admin.');
-showHeader('standalone');
-showMain('default');
-showMenu();
-showArea();
-
-echo '
-    
+$embeddedhtml = '
 <div class="bloque">
-    <form method="get" action="" class="formulario --altas">
+    <form method="get" action="addAdmin.next.php" class="formulario --altas">
 	<h1>Alta de administradores</h1>
 	<p>Ingresa los datos para dar de alta a un administrador nuevo del sistema.</p>
 
@@ -40,10 +34,8 @@ echo '
         </div>
 	</form>
 </div>
-
 ';
-closeArea();
-closeMain();
-showFooter();
-endHtml();
+
+(isset($_SESSION['auth'])) ? generatePage($embeddedhtml, 'Agregar admin.') : authError();
+
 

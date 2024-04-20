@@ -2,6 +2,7 @@
 
 require('../db/connection.php');
 include('../util/tags.php');
+include('../util/errorHandler.php');
 
 $embeddedhtml =
 '
@@ -40,4 +41,4 @@ $embeddedhtml =
 </div>
 ';
 
-generatePage($embeddedhtml, 'Localización de rutas');
+(isset($_SESSION['auth'])) ? generatePage($embeddedhtml, 'Localización de rutas') : authError();

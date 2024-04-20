@@ -1,16 +1,12 @@
 <?php
-//session_name('deprag');
-//session_start();
+
 require('../db/connection.php');
-//include('errores.php');
+include('../util/errorHandler.php');
 include('../util/tags.php');
 
-// if ($_SESSION['autorizacion'] == 1) 
-// { 
 
 	$embeddedhtml =  '
 
-	
 	<div class="bloque">
 		<form method="get" action="Modificar_rutas.php" class="formulario --modificaciones">
 		<h1>Modificar rutas</h1>
@@ -37,11 +33,6 @@ include('../util/tags.php');
 </div>
 	';
 
-	generatePage($embeddedhtml, 'Modificar ruta');
-// }
-// else 
-// {
-// 	$_SESSION['autorizacion'] = 0;
-// 	error_autorizacion();
-// } 
+(isset($_SESSION['auth'])) ? generatePage($embeddedhtml, 'Modificar ruta') : authError();
+
 ?>

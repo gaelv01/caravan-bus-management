@@ -2,6 +2,7 @@
 
 require('../db/connection.php');
 include('../util/tags.php');
+include('../util/errorHandler.php');
 
 $embeddedhtml = '
 <div class="bloque">
@@ -39,4 +40,4 @@ $embeddedhtml = '
 </div>
 ';
 
-generatePage($embeddedhtml, 'Agregar camión');
+(isset($_SESSION['auth'])) ? generatePage($embeddedhtml, 'Agregar camión') : authError();

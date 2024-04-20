@@ -1,12 +1,9 @@
 <?php
-//session_name('deprag');
-//session_start();
+
 require('../db/connection.php');
-//include('errores.php');
+include('../util/errorHandler.php');
 include('../util/tags.php');
 
-// if ($_SESSION['autorizacion'] == 1) 
-// { 
 
 	$embeddedhtml =  '
 
@@ -46,11 +43,6 @@ include('../util/tags.php');
 </div>
 	';
 
-	generatePage($embeddedhtml, 'Modificar camión');
-// }
-// else 
-// {
-// 	$_SESSION['autorizacion'] = 0;
-// 	error_autorizacion();
-// } 
+(isset($_SESSION['auth'])) ? generatePage($embeddedhtml, 'Modificar camión') : authError();
+
 ?>
